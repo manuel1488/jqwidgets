@@ -3,6 +3,22 @@ $(document).ready(function () {
         placeHolder: 'Type a pokemon name',
         width: 300        
     });
+
+    $('#base_experience').jqxInput({        
+        width: 100        
+    });
+
+    $('#height').jqxInput({        
+        width: 100        
+    });
+    
+    $('#name').jqxInput({        
+        width: 100        
+    });
+
+    $('#id').jqxInput({        
+        width: 100        
+    });
   
 
     let viewModel = new ViewModel();
@@ -27,13 +43,14 @@ function ViewModel(){
         if(response.ok){
             self.SearchMessage('');
             self.ShowMessage(false);
+
+            let result = await response.json();
+            console.log(result);
         }
         else{
             self.SearchMessage('Pokemon no found');
             self.ShowMessage(true);
-        }
-
-        let result = await response.json();
+        }        
     });
 }
 

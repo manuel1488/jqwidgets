@@ -11,6 +11,7 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">        
         <link rel="stylesheet" href="">
+        <link rel="stylesheet" href="style.css">
         <link rel="stylesheet" href="js/jqwidgets/styles/jqx.base.css">
         <link rel="stylesheet" href="js/jqwidgets/styles/jqx.energyblue.css">
     </head>
@@ -25,6 +26,30 @@
 
             <div style="margin-bottom:20px">
                 <label data-bind="text: SearchMessage, visible: ShowMessage"></label>
+            </div>
+
+            <div style="margin-bottom:20px" class="row">
+                <div>
+                    <label for="base_experience">Base Experience: </label>
+                    <input type="text" id="base_experience" autocomplete="off" data-bind="jqxInput: { value: BaseExperience }"></input>
+                </div>
+
+                <div>
+                    <label for="height">Height: </label>
+                    <input type="text" id="height" autocomplete="off" data-bind="jqxInput: { value: Height }"></input>
+                </div>
+            </div>
+
+            <div style="margin-bottom:20px" class="row">
+                <div>
+                    <label for="id">Id: </label>
+                    <input type="text" id="id" autocomplete="off" data-bind="jqxInput: { value: Id }"></input>
+                </div>
+
+                <div>
+                    <label for="name">Name: </label>
+                    <input type="text" id="name" autocomplete="off" data-bind="jqxInput: { value: Name }"></input>
+                </div>
             </div>
                         
         </div>
